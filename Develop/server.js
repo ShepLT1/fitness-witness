@@ -17,7 +17,10 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitness-witness
   useFindAndModify: false
 });
 
-// routes
+// html routes
+require("./routes/htmlRoutes")(app);
+
+// api routes
 app.use(require("./routes/apiRoutes.js"));
 
 app.listen(PORT, () => {
