@@ -6,10 +6,6 @@ async function initWorkout() {
       .querySelector("a[href='/exercise?']")
       .setAttribute("href", `/exercise?id=${lastWorkout._id}`);
 
-    // let duration = 0;
-
-    // lastworkout.exercises.forEach((item) => duration = duration + item.duration);
-
     const workoutSummary = {
       date: formatDate(lastWorkout.day),
       totalDuration: lastWorkout.totalDuration,

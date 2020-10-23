@@ -4,6 +4,7 @@ const Workouts = require("../models/Workouts");
 router.get("/api/workouts", (req, res) => {
   Workouts.find({})
     .then(dbWorkout => {
+      console.log(dbWorkout[0].totalDuration);
       res.json(dbWorkout);
     })
     .catch(err => {
